@@ -1,3 +1,4 @@
+
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -7,10 +8,10 @@ metadata:
 spec:
   host: nginx-edu6.apps.211-34-231-82.nip.io
   port:
-    targetPort: https
-  tls:
-    insecureEdgeTerminationPolicy: Redirect
-    termination: passthrough
+    targetPort: 8080
+#  tls:
+#    insecureEdgeTerminationPolicy: Redirect
+#    termination: passthrough
   to:
     kind: Service
     name: mynginx
